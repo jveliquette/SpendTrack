@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Account List
+{% endblock title %}
+
+{% block content %}
+    <div class="accounts-container">
+        <h1>Account List</h1>
+        <nav class="navbar-2">
+            <ul class="nav-list">
+                {% if user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'create_account' %}">Create Account</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <table class="accounts-table">
+            <thead>
+                <tr>
+                    <th scope="col">Account Name</th>
+                    <th scope="col">Account Number</th>
+                    <th scope="col">Number of Receipts</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.number }}</td>
+                        <td>{{ item.receipt_count }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

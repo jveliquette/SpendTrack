@@ -1,0 +1,10 @@
+- model: receipts.expensecategory
+  pk: 1
+  fields:
+    name: Test Category 1
+    owner: 1
+- model: receipts.expensecategory
+  pk: 2
+  fields:
+    name: Test Category 2
+    owner: 1

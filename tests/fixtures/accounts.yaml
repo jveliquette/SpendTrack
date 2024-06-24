@@ -1,0 +1,12 @@
+- model: receipts.account
+  pk: 1
+  fields:
+    name: Test Account 1
+    number: "000000"
+    owner: 1
+- model: receipts.account
+  pk: 2
+  fields:
+    name: Test Account 2
+    number: "111111"
+    owner: 1

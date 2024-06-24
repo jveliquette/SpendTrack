@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/receipts.css' %}">
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}" >
+        <title>
+            {% block title %}
+            {% endblock title %}
+        </title>
+
+    </head>
+    <body>
+        <header>
+            <div class="logo-container">
+                <div class="letters">
+                    <div class="logo-1">
+                        <h1>S</h1>
+                    </div>
+                    <div class="logo-2">
+                        <h1>T</h1>
+                    </div>
+                </div>
+                <div class="words">
+                    <div class="logo-3">
+                        <p>SPEND</p>
+                    </div>
+                    <div class="logo-4">
+                        <p>TRACK</p>
+                    </div>
+                </div>
+                {% comment %} <img src="{% static 'images/spendtrack-logo.png' %}" alt="spend track logo"> {% endcomment %}
+            </div>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'account_list' %}">Accounts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'category_list' %}">Expense Categories</a></li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'signup' %}">Sign Up</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock content %}
+        </main>
+        <footer>
+            <div class="footer-logo-container">
+                <div class="footer-letters">
+                    <div class="footer-logo-1">
+                        <h1>S</h1>
+                    </div>
+                    <div class="footer-logo-2">
+                        <h1>T</h1>
+                    </div>
+                </div>
+                <div class="footer-words">
+                    <div class="footer-logo-3">
+                        <p>SPEND</p>
+                    </div>
+                    <div class="footer-logo-4">
+                        <p>TRACK</p>
+                    </div>
+                </div>
+            </div>
+            <p class="footer-p">Created by<br>Julia Veliquette</p>
+        </footer>
+    </body>
+</html>

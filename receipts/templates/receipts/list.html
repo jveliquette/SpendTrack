@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    My Receipts
+{% endblock title %}
+
+{% block content %}
+    <div class="receipts-container">
+        <h1>My Receipts</h1>
+        <nav class="navbar-2">
+            <ul class="nav-list">
+                {% if user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'create_receipt' %}">Create Receipt</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <table class="receipts-table">
+            <thead>
+                <tr>
+                    <th scope="col">Vendor</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Tax</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Account</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for receipt in receipt_list %}
+                    <tr>
+                        <td> {{ receipt.vendor }} </td>
+                        <td> {{ receipt.total }} </td>
+                        <td> {{ receipt.tax }} </td>
+                        <td> {{ receipt.date|date:"m/d/y" }} </td>
+                        <td> {{ receipt.category.name }} </td>
+                        <td> {{ receipt.account.name }} </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

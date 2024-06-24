@@ -1,0 +1,4 @@
+[tool.black]
+line-length = 79
+[tool.djlint]
+blank_line_after_tag="load,extends,include"

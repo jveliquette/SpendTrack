@@ -1,0 +1,30 @@
+- model: receipts.receipt
+  pk: 1
+  fields:
+    vendor: Test Receipt 1
+    total: "100.000"
+    tax: "10.000"
+    date: 2022-06-14 19:38:10.493019+00:00
+    purchaser: 1
+    category: 1
+    account: 1
+- model: receipts.receipt
+  pk: 2
+  fields:
+    vendor: Test Receipt 2
+    total: "100.000"
+    tax: "10.000"
+    date: 2001-01-10 00:00:00+00:00
+    purchaser: 1
+    category: 1
+    account: 1
+- model: receipts.receipt
+  pk: 3
+  fields:
+    vendor: Test Receipt 3
+    total: "100.000"
+    tax: "10.000"
+    date: 2001-01-10 00:00:00+00:00
+    purchaser: 1
+    category: 2
+    account: 2

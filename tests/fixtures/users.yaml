@@ -1,0 +1,15 @@
+- model: auth.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$320000$QaDyUcPOLTszWQKuNBNgbw$/xFGoyXjBlSEogN66L6jfcUZhMynKKDINFlKqQz/yGw=
+    last_login: 2022-06-14 19:56:23.399804+00:00
+    is_superuser: false
+    username: noor
+    first_name: ""
+    last_name: ""
+    email: ""
+    is_staff: false
+    is_active: true
+    date_joined: 2022-05-09 20:26:05.305400+00:00
+    groups: []
+    user_permissions: []

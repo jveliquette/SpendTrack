@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Expense Categories
+{% endblock title %}
+
+{% block content %}
+    <div class="expenses-container">
+        <h1>Expense Categories</h1>
+        <nav class="navbar-2">
+            <ul class="nav-list">
+                {% if user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'create_category' %}">Add Category</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <table class="expenses-table">
+            <thead>
+                <tr>
+                    <th scope="col">Category Name</th>
+                    <th scope="col">Number of Receipts</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.receipt_count }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}
