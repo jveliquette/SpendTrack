@@ -3,6 +3,9 @@
 ## Overview
 Welcome to SpendTrack, a comprehensive finance tracker designed to help you manage your expenses effectively. This project was developed during my class at HackReactor, and it offers a range of features to ensure you have complete control over your financial activities.
 
+## Live Demo
+**Coming soon!**
+
 ## Features
 - **User Authentication:** Securely log in and out of your SpendTrack account.
 - **Account Management:** Add and manage multiple financial accounts.
