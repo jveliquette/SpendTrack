@@ -33,7 +33,7 @@ Welcome to SpendTrack, a comprehensive finance tracker designed to help you mana
 - HTML5
 
   ## Contact
-- **Email:** juliaveliquette@gmaill.com
+- **Email:** juliaveliquette@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/julia-veliquette-379255289/
 - **Portfolio:** https://juliaveliquette.netlify.app
 
